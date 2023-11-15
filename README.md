@@ -9,11 +9,18 @@ Swipe MRR: public 0.8976 / private 0.9064
 - Re-ranking results using DTW similarity measure between the user curve and curves generated from the button centers of candidate letters of words.
 
 Example of an input swipe image:
-![](demos/example_image1.png=120x120) ![](demos/example_image2.png=120x120")
+<img src="demos/example_image1.png" width="120">
 
 ### Requirements:
 * python >=3.10
 * pdm >= 2.9.2
+
+Model weights and tokenizer can be downloaded from [here](https://drive.google.com/drive/folders/1t0lqMeLRAGuAYKbPD1rOnU0zJ4p3xnIj).
+To make the final submission you need to put the files in a /src/model_files/, having previously unzipped the files.
+
+Before running the scripts, change paths in src/constants.py:
+- DATA_PATH - files for training and testing should be located in this path.
+- IMAGES_PATH - images will be placed in this path.
 
 ### Installing dependencies
 ```sh
@@ -30,9 +37,6 @@ bash bin/data_processing.sh
 ```sh
 bash bin/train.sh
 ```
-
-Model weights and tokenizer can be downloaded from [here](https://drive.google.com/drive/folders/1t0lqMeLRAGuAYKbPD1rOnU0zJ4p3xnIj).
-To make the final submission you need to put the files in a /src/model_files/, having previously unzipped the files.
 
 ### Make final submission
 ```sh

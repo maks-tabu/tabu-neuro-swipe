@@ -57,7 +57,7 @@ def get_prediction(
     test_data: pl.DataFrame, global_test_mode: bool = True, batch_size: int = 16
 ) -> pl.DataFrame:
     trocr_model = TrOcrModel("result_model.pth", "tokenizer")
-    test_data = trocr_model.predict(test_data, global_test_mode, batch_size)[:100]
+    test_data = trocr_model.predict(test_data, global_test_mode, batch_size)
     fcom = Fcom()
 
     for metric_name in ["l2", "cosine"]:

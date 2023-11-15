@@ -3,12 +3,9 @@ import polars as pl
 
 GRID_TO_ID = {"default": 1, "extra": 2, "android_ru_east_slavic_separate_comma": 3}
 
-# DATA_PATH = Path("/data")
-# IMAGES_PATH = Path("/images")
+DATA_PATH = Path("/data")  #change
+IMAGES_PATH = Path("/images") #change
 MODEL_FILES_PATH = Path("src/model_files")
-
-DATA_PATH = Path("/home/tabolin.maksim2/dataset/sw_task/result_noctx_10k")
-IMAGES_PATH = Path("/home/tabolin.maksim2/dataset/images")
 
 
 class AllWords:

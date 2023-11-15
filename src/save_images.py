@@ -1,8 +1,9 @@
 import numpy as np
 from PIL import Image, ImageDraw
-from src.constants import GRID_TO_ID, DATA_PATH
+from src.constants import GRID_TO_ID, DATA_PATH, IMAGES_PATH
 import polars as pl
 from joblib import Parallel, delayed
+import os
 
 
 def save_images(row: pl.Series) -> None:
@@ -69,6 +70,7 @@ def save_images(row: pl.Series) -> None:
 
 if __name__ == "__main__":
     for name_dataset in ["train", "val", "test", "global_test", "accepted"]:
+        os.makedirs(IMAGES_PATH / name_dataset, exist_ok=True)
         data = pl.read_parquet(DATA_PATH / f"{name_dataset}.pa")
         _ = Parallel(n_jobs=-1)(
             delayed(save_images)(row) for row in data.iter_rows(named=True)
