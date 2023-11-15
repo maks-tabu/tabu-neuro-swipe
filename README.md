@@ -30,7 +30,6 @@ Before running the scripts, change paths in src/constants.py:
 
 ### Installing dependencies
 ```sh
-cd swipe
 pdm install --verbose
 ```
 
