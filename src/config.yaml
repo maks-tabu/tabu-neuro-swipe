@@ -1,0 +1,23 @@
+train_part1:
+  EPOCH: 3
+  TOKENIZER: ''
+  PRETRAINING_WEIGHT: ''
+  TRAIN_DATASETS: ["train"]
+  LR: 0.00005
+  NAME_WEIGHT: "model1.pth"
+
+train_part2:
+  EPOCH: 2
+  TOKENIZER: 'tokenizer'
+  PRETRAINING_WEIGHT: "model1.pth"
+  TRAIN_DATASETS: ["train", "accepted"]
+  LR: 0.00002
+  NAME_WEIGHT: "model2.pth"
+
+train_part3:
+  EPOCH: 1
+  TOKENIZER: 'tokenizer'
+  PRETRAINING_WEIGHT: "model2.pth"
+  TRAIN_DATASETS: ["train"]
+  LR: 0.000005
+  NAME_WEIGHT: "result_model.pth"
