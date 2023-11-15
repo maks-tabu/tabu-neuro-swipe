@@ -10,10 +10,12 @@ Swipe MRR: public 0.8976 / private 0.9064
 
 Example of an input swipe image:
 
-<img src="demos/example_image1.png" width="120">
-<img src="demos/example_image2.png" width="120">
-<img src="demos/example_image3.png" width="120">
-<img src="demos/example_image4.png" width="120">
+<div style="display: flex;">
+  <img src="demos/example_image1.png" width="120">
+  <img src="demos/example_image2.png" width="120">
+  <img src="demos/example_image3.png" width="120">
+  <img src="demos/example_image4.png" width="120">
+</div>
 
 ### Requirements:
 * python >=3.10
